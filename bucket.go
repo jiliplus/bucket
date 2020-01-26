@@ -7,11 +7,11 @@ import (
 
 // Bucket 会保留一部分的 token，仅供 Hurry 使用。
 type Bucket interface {
-	// Hurry 会先使用为自己保存的 token
-	// 不够的时候，再 Wait token
+	// Hurry 会先使用为自己保存的 hToken
+	// 不够的时候，再使用 wToken
 	Hurry(count int64)
 
-	// Wait 无法使用保留的 token
+	// Wait 只能使用 wToken
 	Wait(count int64)
 }
 
