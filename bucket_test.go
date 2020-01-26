@@ -352,3 +352,8 @@ func Test_bucket_needTime(t *testing.T) {
 		})
 	})
 }
+
+func Test_quickReturn(t *testing.T) {
+	hurryQuickReturn()
+	waitQuickReturn()
+}
